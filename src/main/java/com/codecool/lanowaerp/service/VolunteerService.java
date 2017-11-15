@@ -22,4 +22,11 @@ public class VolunteerService {
         return (List<Volunteer>) volunteerRepository.findAll();
     }
 
+    public Volunteer findByEmail(String email) {
+        return volunteerRepository.findByEmail(email);
+    }
+
+    public Volunteer findByConfirmationToken(String token) {
+        return volunteerRepository.findByConfirmationToken(token);
+    }
 }
