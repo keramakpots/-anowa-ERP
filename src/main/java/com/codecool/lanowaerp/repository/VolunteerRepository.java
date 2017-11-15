@@ -6,4 +6,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface VolunteerRepository extends CrudRepository<Volunteer, Integer> {
+
+    Volunteer findByEmail(String email);
+
+    Volunteer findByConfirmationToken(String token);
+
 }
